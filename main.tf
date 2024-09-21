@@ -1,11 +1,10 @@
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "var.aws_s3_bucket"
+  bucket = var.aws_s3_bucket
 
   tags = {
     Name        = "mybucket"
     Environment = "Dev"
   }
-
 }
 
 resource "aws_s3_bucket_ownership_controls" "mybucket" {
