@@ -34,10 +34,10 @@ resource "aws_s3_bucket_acl" "mybucket" {
   acl    = "public-read"
 }
 
-resource "aws_s3_object" "index1" {
+resource "aws_s3_object" "index" {
   bucket = aws_s3_bucket.mybucket.id
-  key    = "index1.html"
-  source = "index1.html"
+  key    = "index.html"
+  source = "index.html"
   acl  =   "public-read"
   content_type="text/html"
 }
